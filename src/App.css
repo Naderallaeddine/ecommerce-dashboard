@@ -1,3 +1,8 @@
+.form{
+  margin-left: 30%;
+  margin-top: 10%;
+  
+}
 .App {
   text-align: center;
 }
@@ -36,3 +41,10 @@
     transform: rotate(360deg);
   }
 }
+
+.NavBar-wrapper a{
+  padding-left: 30px;
+  text-decoration: none;
+  color: white;
+}
+

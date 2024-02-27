@@ -18,7 +18,7 @@ function AddProduct() {
       method: "POST",
       body: formData,
     });
-    alert("Product Saved");
+    
   }
   return (
     <div>

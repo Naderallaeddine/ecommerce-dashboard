@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "./Header";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AddProduct() {
   const [name, setName] = useState("");
   const [file, setFile] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
+  const navigate=useNavigate();
 
   async function addProduct() {
     const formData = new FormData();
@@ -14,10 +16,12 @@ function AddProduct() {
     formData.append("name", name);
     formData.append("price", price);
     formData.append("description", description);
+    // eslint-disable-next-line no-unused-vars
     let result = await fetch("http://127.0.0.1:8000/api/addproduct", {
       method: "POST",
       body: formData,
     });
+    navigate('/');
     
   }
   return (

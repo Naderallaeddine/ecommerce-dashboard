@@ -10,6 +10,7 @@ function Login() {
     if(localStorage.getItem('user-info')){
       navigate('/add');
     }
+    
   },[navigate])
 
   const [email,setEmail]=useState('');

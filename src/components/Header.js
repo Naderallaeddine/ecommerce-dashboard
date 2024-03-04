@@ -14,13 +14,14 @@ function Header() {
     <div>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="/">E-commerce</Navbar.Brand>
           <Nav className="me-auto NavBar-wrapper">
             {localStorage.getItem("user-info") ? (
               <>
               <Link to="/">Product List</Link>
                 <Link to="/add">Add product</Link>
-                <Link to="/update">Update Product</Link>
+                
+                <Link to="/search">Search Product</Link>
               </>
             ) : (
               <>

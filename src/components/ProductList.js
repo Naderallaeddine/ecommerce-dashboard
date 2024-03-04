@@ -3,6 +3,7 @@ import Header from "./Header";
 import { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 function ProductList() {
   const [data, setData] = useState([]);
@@ -55,14 +56,18 @@ function ProductList() {
                     src={"http://localhost:8000/" + item.file_path}
                   />
                 </td>
-                <td>
-                  <Button
+                <td >
+                  <Button 
                     onClick={() => deleteOperation(item.id)}
                     variant="outline-danger"
                   >
                     Delete
                   </Button>
+
+                 
                 </td>
+                <td> <Link to={"update/"+item.id} className="btn btn-outline-success"> Update</Link></td>
+                
               </tr>
             ))}
           </tbody>
